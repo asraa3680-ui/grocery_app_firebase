@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_auth/firebase_auth.dart'; // مكتبة تسجيل الدخول
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 import 'grocery_provider.dart';
-import 'auth_service.dart'; // تأكدي أنكِ أنشأتِ هذا الملف
-import 'login_screen.dart'; // تأكدي أنكِ أنشأتِ هذا الملف
+import 'auth_service.dart'; 
+import 'login_screen.dart'; 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,9 +16,9 @@ void main() async {
   runApp(
     MultiProvider(
       providers: [
-        // يراقب حالة البيانات في Firestore
+        
         ChangeNotifierProvider(create: (_) => GroceryProvider()..fetchItems()),
-        // يراقب حالة تسجيل الدخول (هل المستخدم موجود أم لا)
+
         StreamProvider<User?>(
           create: (_) => AuthService().user,
           initialData: null,
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // الحصول على بيانات المستخدم الحالي من الـ Provider
+
     final user = Provider.of<User?>(context);
 
     return MaterialApp(
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorSchemeSeed: Colors.blue,
       ),
-      // التبديل التلقائي بين شاشة الدخول والقائمة بناءً على وجود مستخدم
+
       home: user == null ? const LoginScreen() : const GroceryListScreen(),
     );
   }

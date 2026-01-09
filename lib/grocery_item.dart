@@ -13,7 +13,7 @@ class GroceryItem {
     required this.createdAt,
   });
 
-  // تحويل بيانات Firestore إلى كائن Dart
+  
   factory GroceryItem.fromFirestore(DocumentSnapshot doc) {
     final data = doc.data() as Map<String, dynamic>;
 
@@ -25,7 +25,7 @@ class GroceryItem {
     );
   }
 
-  // (اختياري) تحويل الكائن إلى Map لإرساله إلى Firestore
+  
   Map<String, dynamic> toMap() {
     return {
       'name': name,

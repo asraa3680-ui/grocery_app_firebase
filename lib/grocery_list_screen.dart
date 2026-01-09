@@ -60,7 +60,7 @@ class _GroceryListScreenState extends State<GroceryListScreen> {
                   margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   child: ListTile(
                     title: Text(item.name),
-                    subtitle: Text('الكمية: ${item.quantity}'), // متوافق مع ملف item
+                    subtitle: Text('الكمية: ${item.quantity}'),
                     trailing: IconButton(
                       icon: const Icon(Icons.delete, color: Colors.red),
                       onPressed: () => provider.deleteItem(item.id),
@@ -89,7 +89,7 @@ class _GroceryListScreenState extends State<GroceryListScreen> {
           ElevatedButton(
             onPressed: () {
               if (controller.text.isNotEmpty) {
-                // مررنا الاسم والكمية (1) لإصلاح خطأ الـ 2 arguments
+                
                 provider.addItem(controller.text, 1); 
                 Navigator.pop(context);
               }

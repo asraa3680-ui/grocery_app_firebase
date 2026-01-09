@@ -13,7 +13,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _authService = AuthService();
-  bool _isLogin = true; // للتبديل بين تسجيل الدخول وإنشاء حساب
+  bool _isLogin = true;
 
   void _submit() async {
     final email = _emailController.text.trim();
