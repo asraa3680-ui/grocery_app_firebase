@@ -1,0 +1,23 @@
+Project Name: Smart Grocery App
+
+Student: Asraa
+
+AI Usage Summary:
+
+Code Architecture & Restructuring: The AI assisted in migrating the project from a single-file structure to a professional Clean Architecture (Models, Providers, Screens). This ensured better code maintainability and followed Flutter best practices.
+
+Data Modeling & JSON Serialization (Week 1 Requirement): The AI helped in creating the GroceryItem model and implementing fromJson and toJson methods. This was crucial for handling data from Cloud Firestore efficiently and meeting the project's technical requirements.
+
+State Management (Provider): The AI guided the implementation of the Provider Pattern. We moved all Firebase logic (CRUD operations) into a GroceryProvider class, separating the business logic from the UI.
+
+Advanced Features Implementation:
+
+Search: Developed a real-time search filter for the grocery list.
+
+Update/Edit: Implemented logic to update both item names and quantities in Firestore.
+
+Authentication: Refined the login/logout flow using Firebase Auth.
+
+Git & Deployment Support: The AI provided technical support for resolving Git conflicts and using advanced commands (like force push) to ensure the repository was correctly updated after restructuring.
+
+UI/UX Customization: Assisted in styling the app with a consistent Dark Blue theme and ensuring the UI remained user-friendly and clear.
