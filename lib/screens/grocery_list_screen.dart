@@ -10,14 +10,13 @@ class GroceryListScreen extends StatefulWidget {
 }
 
 class _GroceryListScreenState extends State<GroceryListScreen> {
-  String searchQuery = ''; // متغير البحث
+  String searchQuery = ''; 
 
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<GroceryProvider>(context);
     final authService = AuthService();
 
-    // فلترة القائمة بناءً على البحث
     final filteredItems = provider.items.where((item) => 
         item.name.toLowerCase().contains(searchQuery.toLowerCase())).toList();
 
@@ -35,7 +34,7 @@ class _GroceryListScreenState extends State<GroceryListScreen> {
         actions: [
           IconButton(
             icon: const Icon(Icons.logout),
-            onPressed: () async => await authService.signOut(), // زر تسجيل الخروج
+            onPressed: () async => await authService.signOut(), 
           )
         ],
       ),
@@ -71,7 +70,6 @@ class _GroceryListScreenState extends State<GroceryListScreen> {
     );
   }
 
-  // دالة الإضافة والتعديل
   void _showAddDialog(BuildContext context, GroceryProvider p) {
     final controller = TextEditingController();
     showDialog(context: context, builder: (ctx) => AlertDialog(
