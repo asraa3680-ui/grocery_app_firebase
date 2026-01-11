@@ -31,7 +31,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: false,
-        // توحيد اللون للأزرق الداكن
         primaryColor: const Color(0xFF0D47A1),
         appBarTheme: const AppBarTheme(backgroundColor: Color(0xFF0D47A1)),
       ),
