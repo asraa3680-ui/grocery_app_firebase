@@ -11,7 +11,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  bool isLogin = true; // للتبديل بين تسجيل الدخول وإنشاء حساب
+  bool isLogin = true; 
 
   @override
   Widget build(BuildContext context) {
@@ -56,11 +56,10 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Text(isLogin ? 'دخول' : 'تسجيل'),
             ),
             
-            // هذا هو الجزء الذي يظهر "ليس لديك حساب"
             TextButton(
               onPressed: () {
                 setState(() {
-                  isLogin = !isLogin; // تبديل الحالة
+                  isLogin = !isLogin; 
                 });
               },
               child: Text(isLogin 
