@@ -5,7 +5,7 @@ class GroceryItem {
 
   GroceryItem({required this.id, required this.name, this.isDone = false});
 
-  // تحويل من JSON (قادم من فايربيس) إلى Object
+ 
   factory GroceryItem.fromJson(Map<String, dynamic> json, String id) {
     return GroceryItem(
       id: id,
@@ -14,7 +14,7 @@ class GroceryItem {
     );
   }
 
-  // تحويل من Object إلى JSON (لإرساله للفايربيس)
+ 
   Map<String, dynamic> toJson() {
     return {
       'name': name,
